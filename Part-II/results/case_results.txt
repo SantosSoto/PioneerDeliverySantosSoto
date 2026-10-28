@@ -1,0 +1,90 @@
+A1: Required: two locations
+  Expected: {"squared_distance": 25, "pair": ["A", "B"]}
+  Actual:   {"pair": ["A", "B"], "squared_distance": 25}
+  PASS
+A2: Required: six locations
+  Expected: {"squared_distance": 1, "pair": ["C", "D"]}
+  Actual:   {"pair": ["C", "D"], "squared_distance": 1}
+  PASS
+A3: Required: closest pair crosses the split
+  Expected: {"squared_distance": 16, "pair": ["A", "C"]}
+  Actual:   {"pair": ["A", "C"], "squared_distance": 16}
+  PASS
+A4: Required: negative coordinates
+  Expected: {"squared_distance": 9, "pair": ["A", "B"]}
+  Actual:   {"pair": ["A", "B"], "squared_distance": 9}
+  PASS
+A5: Required extension: multiple closest pairs tied
+  Expected: {"squared_distance": 1}
+  Actual:   {"pair": ["A", "B"], "squared_distance": 1}
+  PASS
+A6: Extra: all x-values tied; unique pair crosses the split
+  Expected: {"squared_distance": 1, "pair": ["B", "C"]}
+  Actual:   {"pair": ["B", "C"], "squared_distance": 1}
+  PASS
+A7: Extra: large integer coordinates stay exact
+  Expected: {"squared_distance": 25, "pair": ["A", "B"]}
+  Actual:   {"pair": ["A", "B"], "squared_distance": 25}
+  PASS
+B1: Required: two dispatch pairs reversed
+  Expected: 2
+  Actual:   2
+  PASS
+B2: Required: unchanged order
+  Expected: 0
+  Actual:   0
+  PASS
+B3: Required: fully reversed order
+  Expected: 6
+  Actual:   6
+  PASS
+B4: Required: one delivery
+  Expected: 0
+  Actual:   0
+  PASS
+B5: Required large-count check: 100,000 reversed IDs
+  Expected: 4999950000
+  Actual:   4999950000
+  PASS
+B6: Extra: planned order is not alphabetical
+  Expected: 2
+  Actual:   2
+  PASS
+C1: Required: sample delivery times, k=5
+  Expected: 16
+  Actual:   16
+  PASS
+C2: Required: sample delivery times, k=2
+  Expected: 4
+  Actual:   4
+  PASS
+C3: Required: sample delivery times, k=9
+  Expected: 35
+  Actual:   35
+  PASS
+C4: Required: all delivery times equal
+  Expected: 7
+  Actual:   7
+  PASS
+C5: Required: two values
+  Expected: 3
+  Actual:   3
+  PASS
+C6: Required extension: already sorted input
+  Expected: 5
+  Actual:   5
+  PASS
+C7: Required extension: reverse-sorted input
+  Expected: 3
+  Actual:   3
+  PASS
+C8: Required extension: 5,000 values with many duplicates
+  Expected: 11
+  Actual:   11
+  PASS
+C9: Extra: repeated zero times at the requested rank
+  Expected: 0
+  Actual:   0
+  PASS
+
+22/22 cases passed.

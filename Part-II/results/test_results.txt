@@ -1,0 +1,61 @@
+test_A_rejects_invalid_locations (test_project.InvalidInputTests) ... ok
+test_B_rejects_invalid_dispatch_orders (test_project.InvalidInputTests) ... ok
+test_C_rejects_invalid_times_and_ranks (test_project.InvalidInputTests) ... ok
+test_bad_json_has_a_clear_error (test_project.ProgramTests) ... ok
+test_default_program_shows_all_three_tasks (test_project.ProgramTests) ... ok
+test_missing_field_has_a_clear_error (test_project.ProgramTests) ... ok
+test_one_task_needs_only_its_own_fields (test_project.ProgramTests) ... ok
+test_A_against_every_pair_on_200_small_inputs (test_project.ReferenceTests) ... ok
+test_A_only_sorts_the_two_initial_lists (test_project.ReferenceTests) ... ok
+test_B_against_nested_loops_on_200_small_inputs (test_project.ReferenceTests) ... ok
+test_C_every_rank_against_sorting_on_200_small_inputs (test_project.ReferenceTests) ... ok
+test_C_never_sorts_more_than_five_values (test_project.ReferenceTests) ... ok
+test_A1 (test_project.SavedCases)
+Required: two locations ... ok
+test_A2 (test_project.SavedCases)
+Required: six locations ... ok
+test_A3 (test_project.SavedCases)
+Required: closest pair crosses the split ... ok
+test_A4 (test_project.SavedCases)
+Required: negative coordinates ... ok
+test_A5 (test_project.SavedCases)
+Required extension: multiple closest pairs tied ... ok
+test_A6 (test_project.SavedCases)
+Extra: all x-values tied; unique pair crosses the split ... ok
+test_A7 (test_project.SavedCases)
+Extra: large integer coordinates stay exact ... ok
+test_B1 (test_project.SavedCases)
+Required: two dispatch pairs reversed ... ok
+test_B2 (test_project.SavedCases)
+Required: unchanged order ... ok
+test_B3 (test_project.SavedCases)
+Required: fully reversed order ... ok
+test_B4 (test_project.SavedCases)
+Required: one delivery ... ok
+test_B5 (test_project.SavedCases)
+Required large-count check: 100,000 reversed IDs ... ok
+test_B6 (test_project.SavedCases)
+Extra: planned order is not alphabetical ... ok
+test_C1 (test_project.SavedCases)
+Required: sample delivery times, k=5 ... ok
+test_C2 (test_project.SavedCases)
+Required: sample delivery times, k=2 ... ok
+test_C3 (test_project.SavedCases)
+Required: sample delivery times, k=9 ... ok
+test_C4 (test_project.SavedCases)
+Required: all delivery times equal ... ok
+test_C5 (test_project.SavedCases)
+Required: two values ... ok
+test_C6 (test_project.SavedCases)
+Required extension: already sorted input ... ok
+test_C7 (test_project.SavedCases)
+Required extension: reverse-sorted input ... ok
+test_C8 (test_project.SavedCases)
+Required extension: 5,000 values with many duplicates ... ok
+test_C9 (test_project.SavedCases)
+Extra: repeated zero times at the requested rank ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 0.271s
+
+OK
