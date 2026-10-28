@@ -1,0 +1,492 @@
+{
+  "A": [
+    {
+      "name": "A1",
+      "description": "Required: two locations",
+      "input": {
+        "locations": [
+          [
+            "A",
+            0,
+            0
+          ],
+          [
+            "B",
+            3,
+            4
+          ]
+        ]
+      },
+      "expected": {
+        "squared_distance": 25,
+        "pair": [
+          "A",
+          "B"
+        ]
+      }
+    },
+    {
+      "name": "A2",
+      "description": "Required: six locations",
+      "input": {
+        "locations": [
+          [
+            "A",
+            0,
+            0
+          ],
+          [
+            "B",
+            7,
+            2
+          ],
+          [
+            "C",
+            4,
+            5
+          ],
+          [
+            "D",
+            5,
+            5
+          ],
+          [
+            "E",
+            12,
+            2
+          ],
+          [
+            "F",
+            2,
+            9
+          ]
+        ]
+      },
+      "expected": {
+        "squared_distance": 1,
+        "pair": [
+          "C",
+          "D"
+        ]
+      }
+    },
+    {
+      "name": "A3",
+      "description": "Required: closest pair crosses the split",
+      "input": {
+        "locations": [
+          [
+            "A",
+            -3,
+            1
+          ],
+          [
+            "B",
+            -3,
+            11
+          ],
+          [
+            "C",
+            1,
+            1
+          ],
+          [
+            "D",
+            2,
+            15
+          ]
+        ]
+      },
+      "expected": {
+        "squared_distance": 16,
+        "pair": [
+          "A",
+          "C"
+        ]
+      }
+    },
+    {
+      "name": "A4",
+      "description": "Required: negative coordinates",
+      "input": {
+        "locations": [
+          [
+            "A",
+            -5,
+            -5
+          ],
+          [
+            "B",
+            -5,
+            -2
+          ],
+          [
+            "C",
+            6,
+            8
+          ]
+        ]
+      },
+      "expected": {
+        "squared_distance": 9,
+        "pair": [
+          "A",
+          "B"
+        ]
+      }
+    },
+    {
+      "name": "A5",
+      "description": "Required extension: multiple closest pairs tied",
+      "input": {
+        "locations": [
+          [
+            "A",
+            0,
+            0
+          ],
+          [
+            "B",
+            0,
+            1
+          ],
+          [
+            "C",
+            1,
+            0
+          ],
+          [
+            "D",
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": {
+        "squared_distance": 1
+      }
+    },
+    {
+      "name": "A6",
+      "description": "Extra: all x-values tied; unique pair crosses the split",
+      "input": {
+        "locations": [
+          [
+            "A",
+            5,
+            0
+          ],
+          [
+            "B",
+            5,
+            10
+          ],
+          [
+            "C",
+            5,
+            11
+          ],
+          [
+            "D",
+            5,
+            30
+          ]
+        ]
+      },
+      "expected": {
+        "squared_distance": 1,
+        "pair": [
+          "B",
+          "C"
+        ]
+      }
+    },
+    {
+      "name": "A7",
+      "description": "Extra: large integer coordinates stay exact",
+      "input": {
+        "locations": [
+          [
+            "A",
+            10000000000000000000000000,
+            10000000000000000000000000
+          ],
+          [
+            "B",
+            10000000000000000000000003,
+            10000000000000000000000004
+          ],
+          [
+            "C",
+            -10000000000000000000000000,
+            0
+          ]
+        ]
+      },
+      "expected": {
+        "squared_distance": 25,
+        "pair": [
+          "A",
+          "B"
+        ]
+      }
+    }
+  ],
+  "B": [
+    {
+      "name": "B1",
+      "description": "Required: two dispatch pairs reversed",
+      "input": {
+        "planned": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "actual": [
+          "A",
+          "C",
+          "D",
+          "B",
+          "E"
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "name": "B2",
+      "description": "Required: unchanged order",
+      "input": {
+        "planned": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "name": "B3",
+      "description": "Required: fully reversed order",
+      "input": {
+        "planned": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "actual": [
+          "D",
+          "C",
+          "B",
+          "A"
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "name": "B4",
+      "description": "Required: one delivery",
+      "input": {
+        "planned": [
+          "A"
+        ],
+        "actual": [
+          "A"
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "name": "B5",
+      "description": "Required large-count check: 100,000 reversed IDs",
+      "input": {
+        "generator": "reversed_dispatch",
+        "n": 100000
+      },
+      "expected": 4999950000
+    },
+    {
+      "name": "B6",
+      "description": "Extra: planned order is not alphabetical",
+      "input": {
+        "planned": [
+          "stop-z",
+          "stop-a",
+          "stop-q",
+          "stop-b"
+        ],
+        "actual": [
+          "stop-a",
+          "stop-z",
+          "stop-b",
+          "stop-q"
+        ]
+      },
+      "expected": 2
+    }
+  ],
+  "C": [
+    {
+      "name": "C1",
+      "description": "Required: sample delivery times, k=5",
+      "input": {
+        "times": [
+          18,
+          4,
+          29,
+          11,
+          4,
+          16,
+          35,
+          9,
+          22
+        ],
+        "k": 5
+      },
+      "expected": 16
+    },
+    {
+      "name": "C2",
+      "description": "Required: sample delivery times, k=2",
+      "input": {
+        "times": [
+          18,
+          4,
+          29,
+          11,
+          4,
+          16,
+          35,
+          9,
+          22
+        ],
+        "k": 2
+      },
+      "expected": 4
+    },
+    {
+      "name": "C3",
+      "description": "Required: sample delivery times, k=9",
+      "input": {
+        "times": [
+          18,
+          4,
+          29,
+          11,
+          4,
+          16,
+          35,
+          9,
+          22
+        ],
+        "k": 9
+      },
+      "expected": 35
+    },
+    {
+      "name": "C4",
+      "description": "Required: all delivery times equal",
+      "input": {
+        "times": [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        "k": 4
+      },
+      "expected": 7
+    },
+    {
+      "name": "C5",
+      "description": "Required: two values",
+      "input": {
+        "times": [
+          8,
+          3
+        ],
+        "k": 1
+      },
+      "expected": 3
+    },
+    {
+      "name": "C6",
+      "description": "Required extension: already sorted input",
+      "input": {
+        "times": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "k": 6
+      },
+      "expected": 5
+    },
+    {
+      "name": "C7",
+      "description": "Required extension: reverse-sorted input",
+      "input": {
+        "times": [
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "k": 4
+      },
+      "expected": 3
+    },
+    {
+      "name": "C8",
+      "description": "Required extension: 5,000 values with many duplicates",
+      "input": {
+        "generator": "duplicate_times",
+        "n": 5000,
+        "distinct": 23,
+        "k": 2500
+      },
+      "expected": 11
+    },
+    {
+      "name": "C9",
+      "description": "Extra: repeated zero times at the requested rank",
+      "input": {
+        "times": [
+          0,
+          0,
+          0,
+          3,
+          9
+        ],
+        "k": 3
+      },
+      "expected": 0
+    }
+  ]
+}

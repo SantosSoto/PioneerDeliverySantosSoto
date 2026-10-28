@@ -1,0 +1,236 @@
+[
+  {
+    "case": "A1",
+    "description": "Required: two locations",
+    "expected": {
+      "squared_distance": 25,
+      "pair": [
+        "A",
+        "B"
+      ]
+    },
+    "actual": {
+      "pair": [
+        "A",
+        "B"
+      ],
+      "squared_distance": 25
+    },
+    "passed": true
+  },
+  {
+    "case": "A2",
+    "description": "Required: six locations",
+    "expected": {
+      "squared_distance": 1,
+      "pair": [
+        "C",
+        "D"
+      ]
+    },
+    "actual": {
+      "pair": [
+        "C",
+        "D"
+      ],
+      "squared_distance": 1
+    },
+    "passed": true
+  },
+  {
+    "case": "A3",
+    "description": "Required: closest pair crosses the split",
+    "expected": {
+      "squared_distance": 16,
+      "pair": [
+        "A",
+        "C"
+      ]
+    },
+    "actual": {
+      "pair": [
+        "A",
+        "C"
+      ],
+      "squared_distance": 16
+    },
+    "passed": true
+  },
+  {
+    "case": "A4",
+    "description": "Required: negative coordinates",
+    "expected": {
+      "squared_distance": 9,
+      "pair": [
+        "A",
+        "B"
+      ]
+    },
+    "actual": {
+      "pair": [
+        "A",
+        "B"
+      ],
+      "squared_distance": 9
+    },
+    "passed": true
+  },
+  {
+    "case": "A5",
+    "description": "Required extension: multiple closest pairs tied",
+    "expected": {
+      "squared_distance": 1
+    },
+    "actual": {
+      "pair": [
+        "A",
+        "B"
+      ],
+      "squared_distance": 1
+    },
+    "passed": true
+  },
+  {
+    "case": "A6",
+    "description": "Extra: all x-values tied; unique pair crosses the split",
+    "expected": {
+      "squared_distance": 1,
+      "pair": [
+        "B",
+        "C"
+      ]
+    },
+    "actual": {
+      "pair": [
+        "B",
+        "C"
+      ],
+      "squared_distance": 1
+    },
+    "passed": true
+  },
+  {
+    "case": "A7",
+    "description": "Extra: large integer coordinates stay exact",
+    "expected": {
+      "squared_distance": 25,
+      "pair": [
+        "A",
+        "B"
+      ]
+    },
+    "actual": {
+      "pair": [
+        "A",
+        "B"
+      ],
+      "squared_distance": 25
+    },
+    "passed": true
+  },
+  {
+    "case": "B1",
+    "description": "Required: two dispatch pairs reversed",
+    "expected": 2,
+    "actual": 2,
+    "passed": true
+  },
+  {
+    "case": "B2",
+    "description": "Required: unchanged order",
+    "expected": 0,
+    "actual": 0,
+    "passed": true
+  },
+  {
+    "case": "B3",
+    "description": "Required: fully reversed order",
+    "expected": 6,
+    "actual": 6,
+    "passed": true
+  },
+  {
+    "case": "B4",
+    "description": "Required: one delivery",
+    "expected": 0,
+    "actual": 0,
+    "passed": true
+  },
+  {
+    "case": "B5",
+    "description": "Required large-count check: 100,000 reversed IDs",
+    "expected": 4999950000,
+    "actual": 4999950000,
+    "passed": true
+  },
+  {
+    "case": "B6",
+    "description": "Extra: planned order is not alphabetical",
+    "expected": 2,
+    "actual": 2,
+    "passed": true
+  },
+  {
+    "case": "C1",
+    "description": "Required: sample delivery times, k=5",
+    "expected": 16,
+    "actual": 16,
+    "passed": true
+  },
+  {
+    "case": "C2",
+    "description": "Required: sample delivery times, k=2",
+    "expected": 4,
+    "actual": 4,
+    "passed": true
+  },
+  {
+    "case": "C3",
+    "description": "Required: sample delivery times, k=9",
+    "expected": 35,
+    "actual": 35,
+    "passed": true
+  },
+  {
+    "case": "C4",
+    "description": "Required: all delivery times equal",
+    "expected": 7,
+    "actual": 7,
+    "passed": true
+  },
+  {
+    "case": "C5",
+    "description": "Required: two values",
+    "expected": 3,
+    "actual": 3,
+    "passed": true
+  },
+  {
+    "case": "C6",
+    "description": "Required extension: already sorted input",
+    "expected": 5,
+    "actual": 5,
+    "passed": true
+  },
+  {
+    "case": "C7",
+    "description": "Required extension: reverse-sorted input",
+    "expected": 3,
+    "actual": 3,
+    "passed": true
+  },
+  {
+    "case": "C8",
+    "description": "Required extension: 5,000 values with many duplicates",
+    "expected": 11,
+    "actual": 11,
+    "passed": true
+  },
+  {
+    "case": "C9",
+    "description": "Extra: repeated zero times at the requested rank",
+    "expected": 0,
+    "actual": 0,
+    "passed": true
+  }
+]
